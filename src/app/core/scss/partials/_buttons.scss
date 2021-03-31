@@ -1,0 +1,14 @@
+.mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button, .mat-fab, .mat-mini-fab {
+    border-radius: 10px !important;
+}
+
+.mat-button, .mat-icon-button, .mat-stroked-button {
+    color: #738497 !important;
+}
+
+.mat-button.mat-primary, .mat-raised-button.mat-primary, {
+    .mat-progress-spinner circle, .mat-spinner circle {
+        stroke: #ffffff;
+    }
+}
+

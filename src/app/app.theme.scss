@@ -1,0 +1,172 @@
+$theme-default-light: (
+    50 : #fef8f0,
+    100 : #fdedda,
+    200 : #fbe1c1,
+    300 : #f9d5a8,
+    400 : #f8cc96,
+    500 : #f7c383,
+    600 : #f6bd7b,
+    700 : #f5b570,
+    800 : #f3ae66,
+    900 : #f1a153,
+    A100 : #fafafa,
+    A200 : #fafafa,
+    A400 : #fff4eb,
+    A700 : #ffe7d1,
+    contrast: (
+        50 : #5A6175,
+        100 : #5A6175,
+        200 : #5A6175,
+        300 : #5A6175,
+        400 : #5A6175,
+        500 : #5A6175,
+        600 : #5A6175,
+        700 : #5A6175,
+        800 : #5A6175,
+        900 : #5A6175,
+        A100 : #5A6175,
+        A200 : #5A6175,
+        A400 : #5A6175,
+        A700 : #5A6175,
+    )
+);
+
+$theme-default-accent: (
+    50 : #f0f8fe,
+    100 : #daedfd,
+    200 : #c1e1fb,
+    300 : #a8d5f9,
+    400 : #96ccf8,
+    500 : #83c3f7,
+    600 : #7bbdf6,
+    700 : #70b5f5,
+    800 : #66aef3,
+    900 : #53a1f1,
+    A100 : #fafafa,
+    A200 : #fafafa,
+    A400 : #ebf4ff,
+    A700 : #d1e7ff,
+    contrast: (
+        50 : #5A6175,
+        100 : #5A6175,
+        200 : #5A6175,
+        300 : #5A6175,
+        400 : #5A6175,
+        500 : #5A6175,
+        600 : #5A6175,
+        700 : #5A6175,
+        800 : #5A6175,
+        900 : #5A6175,
+        A100 : #5A6175,
+        A200 : #5A6175,
+        A400 : #5A6175,
+        A700 : #5A6175,
+    )
+);
+
+
+// -----------------------------------------------------------------------------------------------------
+// @ Typography
+// -----------------------------------------------------------------------------------------------------
+
+// Angular Material typography
+$typography: mat-typography-config(
+    $font-family: 'Open Sans, Helvetica Neue, Arial, sans-serif',
+    $title: mat-typography-level(20px, 32px, 600),
+    $body-2: mat-typography-level(14px, 24px, 600),
+    $button: mat-typography-level(14px, 14px, 600),
+    $input: mat-typography-level(16px, 1.125, 400) // line-height must be unitless !!!
+);
+
+// Setup the typography
+@include angular-material-typography($typography);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$theme-app-primary: mat-palette($theme-default-light);
+$theme-app-accent:  mat-palette($theme-default-accent);
+
+// The warn palette is optional (defaults to red).
+$theme-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$theme-app-theme: mat-light-theme($theme-app-primary, $theme-app-accent, $theme-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($theme-app-theme);
+
+// Ionic colors
+:root {
+    --ion-color-primary: #f7c383;
+    --ion-color-primary-rgb: 247,195,131;
+    --ion-color-primary-contrast: #5A6175;
+    --ion-color-primary-contrast-rgb: 0,0,0;
+    --ion-color-primary-shade: #d9ac73;
+    --ion-color-primary-tint: #f8c98f;
+  
+    --ion-color-secondary: #69bb7b;
+    --ion-color-secondary-rgb: 105,187,123;
+    --ion-color-secondary-contrast: #000000;
+    --ion-color-secondary-contrast-rgb: 0,0,0;
+    --ion-color-secondary-shade: #5ca56c;
+    --ion-color-secondary-tint: #78c288;
+  
+    --ion-color-tertiary: #193455;
+    --ion-color-tertiary-rgb: 25,52,85;
+    --ion-color-tertiary-contrast: #ffffff;
+    --ion-color-tertiary-contrast-rgb: 255,255,255;
+    --ion-color-tertiary-shade: #162e4b;
+    --ion-color-tertiary-tint: #304866;
+  
+    --ion-color-success: #33E878;
+    --ion-color-success-rgb: 51,232,120;
+    --ion-color-success-contrast: #5A6175;
+    --ion-color-success-contrast-rgb: 0,0,0;
+    --ion-color-success-shade: #2dcc6a;
+    --ion-color-success-tint: #47ea86;
+  
+    --ion-color-warning: #ffce00;
+    --ion-color-warning-rgb: 255,206,0;
+    --ion-color-warning-contrast: #ffffff;
+    --ion-color-warning-contrast-rgb: 255,255,255;
+    --ion-color-warning-shade: #e0b500;
+    --ion-color-warning-tint: #ffd31a;
+  
+    --ion-color-danger: #F78383;
+    --ion-color-danger-rgb: 247,131,131;
+    --ion-color-danger-contrast: #000000;
+    --ion-color-danger-contrast-rgb: 0,0,0;
+    --ion-color-danger-shade: #d97373;
+    --ion-color-danger-tint: #f88f8f;
+  
+    --ion-color-dark: #646363;
+    --ion-color-dark-rgb: 100,99,99;
+    --ion-color-dark-contrast: #ffffff;
+    --ion-color-dark-contrast-rgb: 255,255,255;
+    --ion-color-dark-shade: #585757;
+    --ion-color-dark-tint: #747373;
+  
+    --ion-color-medium: #989aa2;
+    --ion-color-medium-rgb: 152,154,162;
+    --ion-color-medium-contrast: #5A6175;
+    --ion-color-medium-contrast-rgb: 0,0,0;
+    --ion-color-medium-shade: #86888f;
+    --ion-color-medium-tint: #a2a4ab;
+  
+    --ion-color-light: #f4f5f8;
+    --ion-color-light-rgb: 244,244,244;
+    --ion-color-light-contrast: #5A6175;
+    --ion-color-light-contrast-rgb: 0,0,0;
+    --ion-color-light-shade: #d7d8da;
+    --ion-color-light-tint: #f5f6f9;
+
+    --ion-text-color: #5A6175;
+    --ion-background-color: #FFFCF7;
+
+    --ion-font-family: 'Roboto';
+
+    --ion-toolbar-background: #FFFCF7;
+  }

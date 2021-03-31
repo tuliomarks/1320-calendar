@@ -1,0 +1,16 @@
+@import "theme";
+
+// Include core Angular Material styles
+@include mat-core();
+
+@import "variables";
+
+// Breakpoint mixins
+@import "partials/breakpoints";
+@import "partials/typography";
+@import "partials/toolbar";
+
+// Partials
+@import "partials/generals";
+@import "partials/helpers";
+@import "partials/buttons";
